@@ -1,71 +1,46 @@
 #include <stdio.h>
 #include <stdlib.h>
+#include <string.h>
 #include <unistd.h>
-#include <sys/types.h>
-#include <fcntl.h>
 
-// 32 bit
-// PIE	Position Independent Executable	 N 
-// RelRO	Read Only relocations	 N 
-// NX	Non-Executable Stack	 N 
-// Heap exec	Non-Executable Heap	 N 
-// ASLR	Address Space Layout Randomization	 N 
-// SF	Source Fortification	 N 
-// SRC	Source code access	 Y 
+// gcc -m32 -fno-stack-protector -z execstack -no-pie -o simple_overflow simple_overflow.c
 
-#define BUFFER 128
+#define MAX_LEN 256
 
-void read_data(char *data, int fd, int size)
-{
-  while(read(fd, data, 1) == 1 && *data && size)
-    {
-      size--;
-      data++;
+int main(int argc, char **argv) {
+    FILE *fp;
+    unsigned int len;
+    char *buf, *cmd;
+    
+    if(argc != 2) {
+        printf("Usage: %s <file>\n", argv[0]);
+        exit(1);
     }
-}
-void read_file(int fd)
-{
-  char path[BUFFER+1] = {0};
-  int size;  
-   
-  if(read(fd, &size, sizeof(int)) != sizeof(int))
-    {
-      printf("[-] File too short.\n");
-      exit(0);
+    
+    fp = fopen(argv[1], "r");
+    if(!fp) {
+        perror("fopen");
+        exit(1);
     }
-   
-  if(size >= BUFFER)
-    {
-      printf("[-] Path too long.\n");
-      exit(0);
-    }
-  read_data(path, fd, size);
-   
-  if(path[0] != '/')
-    {
-      printf("[-] Need a absolute path.\n");
-      exit(0);
-    }  
-   
-  printf("[+] The pathname is : %s\n", path);
-}
-int main(int argc, char **argv)
-{
-  int fd;
-   
-  if(argc != 2)
-    {
-      printf("[-] Usage : %s <filename>\n", argv[0]);
-      exit(0);
-    }
-   
-  if((fd = open(argv[1], O_RDONLY)) == -1)
-    {
-      perror("[-] open ");
-      exit(0);
-    }
-   
-  read_file(fd);
-  close(fd);
-  return 0;
+    
+    // VULNERABLE: Read unsigned int length
+    fread(&len, 4, 1, fp);
+    printf("[+] Length: %u\n", len);
+    
+    // INTEGER OVERFLOW: UINT_MAX → malloc(0) = tiny buffer
+    buf = malloc(len);
+    
+    // OVERFLOW: Read huge amount into tiny heap buffer
+    fread(buf, 1, len, fp);
+    
+    // DANGEROUS: Execute corrupted buffer as command!
+    printf("[+] Executing: %s\n", buf);
+    cmd = malloc(256);
+    strcpy(cmd, buf);  // Copy overflowed data
+    system(cmd);       // COMMAND EXECUTION!
+    
+    free(buf);
+    free(cmd);
+    fclose(fp);
+    return 0;
 }

