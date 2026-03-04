@@ -8,8 +8,8 @@
       "args": [],
       "stopAtEntry": false,
       "externalConsole": false,
-      "cwd": "/home/enigma/Documents/exploit_code",
-      "program": "/home/enigma/Documents/exploit_code/build/Debug/outDebug",
+      "cwd": "/home/enigma/Documents/exploit_code/vulnerable_integer",
+      "program": "/home/enigma/Documents/exploit_code/vulnerable_integer/build/Debug/outDebug",
       "MIMode": "gdb",
       "miDebuggerPath": "/usr/bin/gdb-13",
       "setupCommands": [

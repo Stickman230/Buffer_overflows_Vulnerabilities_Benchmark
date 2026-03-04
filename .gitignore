@@ -1,0 +1,34 @@
+# Compiled objects
+*.o
+*.obj
+*.so
+*.dylib
+*.exe
+
+# Build directories
+build/
+dist/
+*.out
+
+# IDE and editor files
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.egg-info/
+.pytest_cache/
+
+# Dependencies
+node_modules/
+*.lock
+
+# Temporary files
+*.tmp
+*.log

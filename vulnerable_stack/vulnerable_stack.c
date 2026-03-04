@@ -1,8 +1,3 @@
-#include <unistd.h>
-#include <sys/types.h>
-#include <stdlib.h>
-#include <stdio.h>
-
 // 32 Bit
 // PIE	  Position Independent Executable	 N 
 // RelRO	  Read Only relocations	 N
@@ -19,6 +14,11 @@
 // -z execstack \
 // -no-pie -fno-pie \
 // -Wl,-z,norelro
+
+#include <unistd.h>
+#include <sys/types.h>
+#include <stdlib.h>
+#include <stdio.h>
 
 int main()
 {

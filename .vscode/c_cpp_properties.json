@@ -2,9 +2,6 @@
   "configurations": [
     {
       "name": "linux-gcc-x64",
-      "compilerPath": "/usr/bin/gcc-13",
-      "cStandard": "c17",
-      "intelliSenseMode": "linux-gcc-x64",
       "includePath": [
         "${workspaceFolder}/**",
         "/usr/lib/gcc/x86_64-linux-gnu/13/include",
@@ -12,8 +9,13 @@
         "/usr/include/x86_64-linux-gnu",
         "/usr/include"
       ],
-      "defines": [],
-      "cppStandard": "${default}"
+      "compilerPath": "/usr/bin/gcc-13",
+      "cStandard": "c17",
+      "cppStandard": "${default}",
+      "intelliSenseMode": "linux-gcc-x64",
+      "compilerArgs": [
+        ""
+      ]
     }
   ],
   "version": 4
