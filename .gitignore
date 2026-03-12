@@ -17,6 +17,7 @@ dist/
 *.swo
 *~
 .DS_Store
+.sonarlint/
 
 # Python
 __pycache__/

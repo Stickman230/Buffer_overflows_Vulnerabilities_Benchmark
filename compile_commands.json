@@ -1,0 +1,27 @@
+[
+  {
+    "directory": "C:\\Users\\Maxime R\\Documents\\GitHub\\Buffer_overflows_exemple\\CVE-2025-6660",
+    "command": "gcc -O0 -g -fno-omit-frame-pointer CVE-2025-6660.c -o CVE-2025-6660",
+    "file": "CVE-2025-6660.c"
+  },
+  {
+    "directory": "C:\\Users\\Maxime R\\Documents\\GitHub\\Buffer_overflows_exemple\\vulnerable_heap",
+    "command": "gcc -O0 -g vulnerable_heap.c -o vulnerable_heap",
+    "file": "vulnerable_heap.c"
+  },
+  {
+    "directory": "C:\\Users\\Maxime R\\Documents\\GitHub\\Buffer_overflows_exemple\\vulnerable_integer",
+    "command": "gcc -O0 -g vulnerable_integer.c -o vulnerable_integer",
+    "file": "vulnerable_integer.c"
+  },
+  {
+    "directory": "C:\\Users\\Maxime R\\Documents\\GitHub\\Buffer_overflows_exemple\\vulnerable_stack",
+    "command": "gcc -m32 -O0 -g -fno-stack-protector vulnerable_stack.c -o vulnerable_stack",
+    "file": "vulnerable_stack.c"
+  },
+  {
+    "directory": "C:\\Users\\Maxime R\\Documents\\GitHub\\Buffer_overflows_exemple\\vulnerable_stack_ret2win",
+    "command": "gcc -m32 -O0 -g -fno-stack-protector vulnerable_stack_ret2win.c -o vulnerable_stack_ret2win",
+    "file": "vulnerable_stack_ret2win.c"
+  }
+]
