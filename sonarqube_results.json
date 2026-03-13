@@ -1,0 +1,912 @@
+{
+    "total": 14,
+    "p": 1,
+    "ps": 500,
+    "paging": {
+        "pageIndex": 1,
+        "pageSize": 500,
+        "total": 14
+    },
+    "effortTotal": 131,
+    "debtTotal": 131,
+    "issues": [
+        {
+            "key": "AZziuYFEXWky4VLqaR3z",
+            "rule": "c:S5485",
+            "severity": "CRITICAL",
+            "component": "Stickman230_Buffer_overflows_exemple:vulnerable_integer/vulnerable_integer.c",
+            "project": "Stickman230_Buffer_overflows_exemple",
+            "line": 15,
+            "hash": "ff7aeacfaf15b7675133427baccb9fd1",
+            "textRange": {
+                "startLine": 15,
+                "endLine": 15,
+                "startOffset": 4,
+                "endOffset": 40
+            },
+            "flows": [
+                {
+                    "locations": [
+                        {
+                            "component": "Stickman230_Buffer_overflows_exemple:vulnerable_integer/vulnerable_integer.c",
+                            "textRange": {
+                                "startLine": 15,
+                                "endLine": 15,
+                                "startOffset": 4,
+                                "endOffset": 40
+                            },
+                            "msg": "Stream pointer might be NULL"
+                        },
+                        {
+                            "component": "Stickman230_Buffer_overflows_exemple:vulnerable_integer/vulnerable_integer.c",
+                            "textRange": {
+                                "startLine": 13,
+                                "endLine": 13,
+                                "startOffset": 4,
+                                "endOffset": 12
+                            },
+                            "msg": "\u0027fp\u0027 initialized here"
+                        },
+                        {
+                            "component": "Stickman230_Buffer_overflows_exemple:vulnerable_integer/vulnerable_integer.c",
+                            "textRange": {
+                                "startLine": 13,
+                                "endLine": 13,
+                                "startOffset": 15,
+                                "endOffset": 35
+                            },
+                            "msg": "Assuming that \u0027fopen\u0027 fails"
+                        },
+                        {
+                            "component": "Stickman230_Buffer_overflows_exemple:vulnerable_integer/vulnerable_integer.c",
+                            "textRange": {
+                                "startLine": 13,
+                                "endLine": 13,
+                                "startOffset": 15,
+                                "endOffset": 35
+                            },
+                            "msg": "Assuming pointer value is null"
+                        },
+                        {
+                            "component": "Stickman230_Buffer_overflows_exemple:vulnerable_integer/vulnerable_integer.c",
+                            "textRange": {
+                                "startLine": 8,
+                                "endLine": 8,
+                                "startOffset": 4,
+                                "endOffset": 6
+                            },
+                            "msg": "Taking false branch"
+                        },
+                        {
+                            "component": "Stickman230_Buffer_overflows_exemple:vulnerable_integer/vulnerable_integer.c",
+                            "textRange": {
+                                "startLine": 8,
+                                "endLine": 8,
+                                "startOffset": 7,
+                                "endOffset": 16
+                            },
+                            "msg": "Assuming \u0027argc\u0027 is equal to 2"
+                        }
+                    ],
+                    "type": "EXECUTION"
+                },
+                {
+                    "locations": [
+                        {
+                            "component": "Stickman230_Buffer_overflows_exemple:vulnerable_integer/vulnerable_integer.c",
+                            "textRange": {
+                                "startLine": 15,
+                                "endLine": 15,
+                                "startOffset": 37,
+                                "endOffset": 39
+                            },
+                            "msg": "NULL stream pointer"
+                        },
+                        {
+                            "component": "Stickman230_Buffer_overflows_exemple:vulnerable_integer/vulnerable_integer.c",
+                            "textRange": {
+                                "startLine": 13,
+                                "endLine": 13,
+                                "startOffset": 4,
+                                "endOffset": 36
+                            },
+                            "msg": "Using \"fp\" from here"
+                        },
+                        {
+                            "component": "Stickman230_Buffer_overflows_exemple:vulnerable_integer/vulnerable_integer.c",
+                            "textRange": {
+                                "startLine": 13,
+                                "endLine": 13,
+                                "startOffset": 15,
+                                "endOffset": 35
+                            },
+                            "msg": "Assuming \"fopen(argv[1], \"rb\")\" is null"
+                        },
+                        {
+                            "component": "Stickman230_Buffer_overflows_exemple:vulnerable_integer/vulnerable_integer.c",
+                            "textRange": {
+                                "startLine": 5,
+                                "endLine": 5,
+                                "startOffset": 19,
+                                "endOffset": 30
+                            },
+                            "msg": "Using \"argv\" declared here"
+                        }
+                    ],
+                    "description": "NULL stream pointer",
+                    "type": "DATA"
+                }
+            ],
+            "status": "OPEN",
+            "message": "Stream pointer might be NULL",
+            "effort": "10min",
+            "debt": "10min",
+            "author": "mxime.reynaudcool@gmail.com",
+            "tags": [
+                "suspicious",
+                "symbolic-execution"
+            ],
+            "creationDate": "2026-03-05T12:20:44+0000",
+            "updateDate": "2026-03-12T15:45:14+0000",
+            "type": "CODE_SMELL",
+            "organization": "stickman230-org",
+            "cleanCodeAttribute": "LOGICAL",
+            "cleanCodeAttributeCategory": "INTENTIONAL",
+            "impacts": [
+                {
+                    "softwareQuality": "MAINTAINABILITY",
+                    "severity": "HIGH"
+                }
+            ],
+            "issueStatus": "OPEN",
+            "projectName": "Buffer_overflows_exemple",
+            "internalTags": []
+        },
+        {
+            "key": "AZziuYFEXWky4VLqaR30",
+            "rule": "c:S2095",
+            "severity": "BLOCKER",
+            "component": "Stickman230_Buffer_overflows_exemple:vulnerable_integer/vulnerable_integer.c",
+            "project": "Stickman230_Buffer_overflows_exemple",
+            "line": 19,
+            "hash": "69bce5a9c09ca24aebd7098ab4399e05",
+            "textRange": {
+                "startLine": 19,
+                "endLine": 19,
+                "startOffset": 28,
+                "endOffset": 29
+            },
+            "flows": [
+                {
+                    "locations": [
+                        {
+                            "component": "Stickman230_Buffer_overflows_exemple:vulnerable_integer/vulnerable_integer.c",
+                            "textRange": {
+                                "startLine": 19,
+                                "endLine": 19,
+                                "startOffset": 28,
+                                "endOffset": 29
+                            },
+                            "msg": "Opened stream never closed. Potential resource leak"
+                        },
+                        {
+                            "component": "Stickman230_Buffer_overflows_exemple:vulnerable_integer/vulnerable_integer.c",
+                            "textRange": {
+                                "startLine": 19,
+                                "endLine": 19,
+                                "startOffset": 4,
+                                "endOffset": 6
+                            },
+                            "msg": "Taking true branch"
+                        },
+                        {
+                            "component": "Stickman230_Buffer_overflows_exemple:vulnerable_integer/vulnerable_integer.c",
+                            "textRange": {
+                                "startLine": 19,
+                                "endLine": 19,
+                                "startOffset": 8,
+                                "endOffset": 19
+                            },
+                            "msg": "Assuming \u0027buf\u0027 is equal to NULL"
+                        },
+                        {
+                            "component": "Stickman230_Buffer_overflows_exemple:vulnerable_integer/vulnerable_integer.c",
+                            "textRange": {
+                                "startLine": 13,
+                                "endLine": 13,
+                                "startOffset": 15,
+                                "endOffset": 35
+                            },
+                            "msg": "Assuming that \u0027fopen\u0027 is successful"
+                        },
+                        {
+                            "component": "Stickman230_Buffer_overflows_exemple:vulnerable_integer/vulnerable_integer.c",
+                            "textRange": {
+                                "startLine": 13,
+                                "endLine": 13,
+                                "startOffset": 15,
+                                "endOffset": 35
+                            },
+                            "msg": "Stream opened here"
+                        },
+                        {
+                            "component": "Stickman230_Buffer_overflows_exemple:vulnerable_integer/vulnerable_integer.c",
+                            "textRange": {
+                                "startLine": 8,
+                                "endLine": 8,
+                                "startOffset": 4,
+                                "endOffset": 6
+                            },
+                            "msg": "Taking false branch"
+                        },
+                        {
+                            "component": "Stickman230_Buffer_overflows_exemple:vulnerable_integer/vulnerable_integer.c",
+                            "textRange": {
+                                "startLine": 8,
+                                "endLine": 8,
+                                "startOffset": 7,
+                                "endOffset": 16
+                            },
+                            "msg": "Assuming \u0027argc\u0027 is equal to 2"
+                        }
+                    ]
+                }
+            ],
+            "status": "OPEN",
+            "message": "Opened stream never closed. Potential resource leak",
+            "effort": "5min",
+            "debt": "5min",
+            "author": "mxime.reynaudcool@gmail.com",
+            "tags": [
+                "cert",
+                "cwe",
+                "denial-of-service",
+                "leak",
+                "symbolic-execution"
+            ],
+            "creationDate": "2026-03-05T12:20:44+0000",
+            "updateDate": "2026-03-12T15:45:14+0000",
+            "type": "BUG",
+            "organization": "stickman230-org",
+            "cleanCodeAttribute": "COMPLETE",
+            "cleanCodeAttributeCategory": "INTENTIONAL",
+            "impacts": [
+                {
+                    "softwareQuality": "RELIABILITY",
+                    "severity": "BLOCKER"
+                }
+            ],
+            "issueStatus": "OPEN",
+            "projectName": "Buffer_overflows_exemple",
+            "internalTags": []
+        },
+        {
+            "key": "AZziuYFNXWky4VLqaR33",
+            "rule": "c:S924",
+            "severity": "MAJOR",
+            "component": "Stickman230_Buffer_overflows_exemple:CVE-2025-6660/CVE-2025-6660.c",
+            "project": "Stickman230_Buffer_overflows_exemple",
+            "line": 63,
+            "hash": "31e3cdf86411bafb943d031d1811a147",
+            "textRange": {
+                "startLine": 63,
+                "endLine": 63,
+                "startOffset": 4,
+                "endOffset": 9
+            },
+            "flows": [
+                {
+                    "locations": [
+                        {
+                            "component": "Stickman230_Buffer_overflows_exemple:CVE-2025-6660/CVE-2025-6660.c",
+                            "textRange": {
+                                "startLine": 65,
+                                "endLine": 65,
+                                "startOffset": 22,
+                                "endOffset": 27
+                            },
+                            "msg": "\"break\" statement"
+                        }
+                    ]
+                },
+                {
+                    "locations": [
+                        {
+                            "component": "Stickman230_Buffer_overflows_exemple:CVE-2025-6660/CVE-2025-6660.c",
+                            "textRange": {
+                                "startLine": 70,
+                                "endLine": 70,
+                                "startOffset": 12,
+                                "endOffset": 17
+                            },
+                            "msg": "\"break\" statement"
+                        }
+                    ]
+                }
+            ],
+            "status": "OPEN",
+            "message": "Reduce the number of nested \"break\" statements from 2 to 1 authorized.",
+            "effort": "20min",
+            "debt": "20min",
+            "author": "mxime.reynaudcool@gmail.com",
+            "tags": [
+                "based-on-misra",
+                "confusing"
+            ],
+            "creationDate": "2026-03-04T12:59:12+0000",
+            "updateDate": "2026-03-12T15:45:14+0000",
+            "type": "CODE_SMELL",
+            "organization": "stickman230-org",
+            "cleanCodeAttribute": "CLEAR",
+            "cleanCodeAttributeCategory": "INTENTIONAL",
+            "impacts": [
+                {
+                    "softwareQuality": "MAINTAINABILITY",
+                    "severity": "MEDIUM"
+                }
+            ],
+            "issueStatus": "OPEN",
+            "projectName": "Buffer_overflows_exemple",
+            "internalTags": []
+        },
+        {
+            "key": "AZziuYFNXWky4VLqaR31",
+            "rule": "c:S1481",
+            "severity": "MINOR",
+            "component": "Stickman230_Buffer_overflows_exemple:CVE-2025-6660/CVE-2025-6660.c",
+            "project": "Stickman230_Buffer_overflows_exemple",
+            "line": 99,
+            "hash": "62091af832aa639ca3cf63b466f38af0",
+            "textRange": {
+                "startLine": 99,
+                "endLine": 99,
+                "startOffset": 8,
+                "endOffset": 10
+            },
+            "flows": [],
+            "status": "OPEN",
+            "message": "unused variable \u0027wc\u0027",
+            "effort": "5min",
+            "debt": "5min",
+            "author": "mxime.reynaudcool@gmail.com",
+            "tags": [
+                "unused"
+            ],
+            "creationDate": "2026-03-04T12:59:12+0000",
+            "updateDate": "2026-03-12T15:45:14+0000",
+            "type": "CODE_SMELL",
+            "organization": "stickman230-org",
+            "cleanCodeAttribute": "CLEAR",
+            "cleanCodeAttributeCategory": "INTENTIONAL",
+            "impacts": [
+                {
+                    "softwareQuality": "MAINTAINABILITY",
+                    "severity": "LOW"
+                }
+            ],
+            "issueStatus": "OPEN",
+            "projectName": "Buffer_overflows_exemple",
+            "internalTags": []
+        },
+        {
+            "key": "AZziuYFNXWky4VLqaR34",
+            "rule": "c:S1854",
+            "severity": "MAJOR",
+            "component": "Stickman230_Buffer_overflows_exemple:CVE-2025-6660/CVE-2025-6660.c",
+            "project": "Stickman230_Buffer_overflows_exemple",
+            "line": 99,
+            "hash": "62091af832aa639ca3cf63b466f38af0",
+            "textRange": {
+                "startLine": 99,
+                "endLine": 99,
+                "startOffset": 8,
+                "endOffset": 10
+            },
+            "flows": [],
+            "status": "OPEN",
+            "message": "Value stored to \u0027wc\u0027 during its initialization is never read",
+            "effort": "1min",
+            "debt": "1min",
+            "author": "mxime.reynaudcool@gmail.com",
+            "tags": [
+                "cert",
+                "cwe",
+                "symbolic-execution",
+                "unused"
+            ],
+            "creationDate": "2026-03-04T12:59:12+0000",
+            "updateDate": "2026-03-12T15:45:14+0000",
+            "type": "CODE_SMELL",
+            "organization": "stickman230-org",
+            "cleanCodeAttribute": "LOGICAL",
+            "cleanCodeAttributeCategory": "INTENTIONAL",
+            "impacts": [
+                {
+                    "softwareQuality": "MAINTAINABILITY",
+                    "severity": "MEDIUM"
+                }
+            ],
+            "issueStatus": "OPEN",
+            "projectName": "Buffer_overflows_exemple",
+            "internalTags": []
+        },
+        {
+            "key": "AZziuYFvXWky4VLqaR4C",
+            "rule": "c:S5308",
+            "severity": "CRITICAL",
+            "component": "Stickman230_Buffer_overflows_exemple:vulnerable_heap/vulnerable_heap.c",
+            "project": "Stickman230_Buffer_overflows_exemple",
+            "line": 44,
+            "hash": "d62f2a9589d1f4d904b96c323e85097c",
+            "textRange": {
+                "startLine": 44,
+                "endLine": 44,
+                "startOffset": 2,
+                "endOffset": 10
+            },
+            "flows": [],
+            "status": "OPEN",
+            "message": "The return value from the call to \u0027setreuid\u0027 is not checked.  If an error occurs in \u0027setreuid\u0027, the following code may execute with unexpected privileges",
+            "effort": "10min",
+            "debt": "10min",
+            "author": "mxime.reynaudcool@gmail.com",
+            "tags": [
+                "symbolic-execution"
+            ],
+            "creationDate": "2026-02-14T17:43:54+0000",
+            "updateDate": "2026-03-12T15:45:14+0000",
+            "type": "CODE_SMELL",
+            "organization": "stickman230-org",
+            "cleanCodeAttribute": "LOGICAL",
+            "cleanCodeAttributeCategory": "INTENTIONAL",
+            "impacts": [
+                {
+                    "softwareQuality": "MAINTAINABILITY",
+                    "severity": "HIGH"
+                }
+            ],
+            "issueStatus": "OPEN",
+            "projectName": "Buffer_overflows_exemple",
+            "internalTags": []
+        },
+        {
+            "key": "AZziuYFvXWky4VLqaR4A",
+            "rule": "c:S1081",
+            "severity": "CRITICAL",
+            "component": "Stickman230_Buffer_overflows_exemple:vulnerable_heap/vulnerable_heap.c",
+            "project": "Stickman230_Buffer_overflows_exemple",
+            "line": 50,
+            "hash": "0f0f45e3791d07147fd82c1e4e3af29f",
+            "textRange": {
+                "startLine": 50,
+                "endLine": 50,
+                "startOffset": 2,
+                "endOffset": 6
+            },
+            "flows": [],
+            "status": "OPEN",
+            "message": "Remove the use of this insecure \"gets\" function.",
+            "effort": "20min",
+            "debt": "20min",
+            "author": "mxime.reynaudcool@gmail.com",
+            "tags": [
+                "cert",
+                "cwe"
+            ],
+            "creationDate": "2026-02-14T17:43:54+0000",
+            "updateDate": "2026-03-12T15:45:14+0000",
+            "type": "VULNERABILITY",
+            "organization": "stickman230-org",
+            "cleanCodeAttribute": "COMPLETE",
+            "cleanCodeAttributeCategory": "INTENTIONAL",
+            "impacts": [
+                {
+                    "softwareQuality": "SECURITY",
+                    "severity": "HIGH"
+                }
+            ],
+            "issueStatus": "OPEN",
+            "projectName": "Buffer_overflows_exemple",
+            "internalTags": []
+        },
+        {
+            "key": "AZziuYFvXWky4VLqaR4D",
+            "rule": "c:S3584",
+            "severity": "BLOCKER",
+            "component": "Stickman230_Buffer_overflows_exemple:vulnerable_heap/vulnerable_heap.c",
+            "project": "Stickman230_Buffer_overflows_exemple",
+            "line": 56,
+            "hash": "bb30ba0b277e7e114796d8bd84617021",
+            "textRange": {
+                "startLine": 56,
+                "endLine": 56,
+                "startOffset": 2,
+                "endOffset": 10
+            },
+            "flows": [
+                {
+                    "locations": [
+                        {
+                            "component": "Stickman230_Buffer_overflows_exemple:vulnerable_heap/vulnerable_heap.c",
+                            "textRange": {
+                                "startLine": 56,
+                                "endLine": 56,
+                                "startOffset": 2,
+                                "endOffset": 10
+                            },
+                            "msg": "Potential leak of memory pointed to by \u0027cmd\u0027"
+                        },
+                        {
+                            "component": "Stickman230_Buffer_overflows_exemple:vulnerable_heap/vulnerable_heap.c",
+                            "textRange": {
+                                "startLine": 43,
+                                "endLine": 43,
+                                "startOffset": 15,
+                                "endOffset": 28
+                            },
+                            "msg": "Memory is allocated"
+                        }
+                    ],
+                    "type": "EXECUTION"
+                },
+                {
+                    "locations": [
+                        {
+                            "component": "Stickman230_Buffer_overflows_exemple:vulnerable_heap/vulnerable_heap.c",
+                            "textRange": {
+                                "startLine": 43,
+                                "endLine": 43,
+                                "startOffset": 15,
+                                "endOffset": 28
+                            },
+                            "msg": "Memory is allocated"
+                        }
+                    ],
+                    "description": "Memory is allocated",
+                    "type": "DATA"
+                }
+            ],
+            "status": "OPEN",
+            "message": "Potential leak of memory pointed to by \u0027cmd\u0027",
+            "effort": "20min",
+            "debt": "20min",
+            "author": "mxime.reynaudcool@gmail.com",
+            "tags": [
+                "cert",
+                "cwe",
+                "denial-of-service",
+                "leak",
+                "symbolic-execution"
+            ],
+            "creationDate": "2026-02-14T17:43:54+0000",
+            "updateDate": "2026-03-12T15:45:14+0000",
+            "type": "BUG",
+            "organization": "stickman230-org",
+            "cleanCodeAttribute": "COMPLETE",
+            "cleanCodeAttributeCategory": "INTENTIONAL",
+            "impacts": [
+                {
+                    "softwareQuality": "RELIABILITY",
+                    "severity": "BLOCKER"
+                }
+            ],
+            "issueStatus": "OPEN",
+            "projectName": "Buffer_overflows_exemple",
+            "internalTags": []
+        },
+        {
+            "key": "AZziuYFmXWky4VLqaR38",
+            "rule": "c:S1481",
+            "severity": "MINOR",
+            "component": "Stickman230_Buffer_overflows_exemple:vulnerable_stack/vulnerable_stack.c",
+            "project": "Stickman230_Buffer_overflows_exemple",
+            "line": 26,
+            "hash": "4d42aed314dc442a16de36655453abf2",
+            "textRange": {
+                "startLine": 26,
+                "endLine": 26,
+                "startOffset": 6,
+                "endOffset": 9
+            },
+            "flows": [],
+            "status": "OPEN",
+            "message": "unused variable \u0027var\u0027",
+            "effort": "5min",
+            "debt": "5min",
+            "author": "mxime.reynaudcool@gmail.com",
+            "tags": [
+                "unused"
+            ],
+            "creationDate": "2026-02-14T17:43:54+0000",
+            "updateDate": "2026-03-12T15:45:14+0000",
+            "type": "CODE_SMELL",
+            "organization": "stickman230-org",
+            "cleanCodeAttribute": "CLEAR",
+            "cleanCodeAttributeCategory": "INTENTIONAL",
+            "impacts": [
+                {
+                    "softwareQuality": "MAINTAINABILITY",
+                    "severity": "LOW"
+                }
+            ],
+            "issueStatus": "OPEN",
+            "projectName": "Buffer_overflows_exemple",
+            "internalTags": []
+        },
+        {
+            "key": "AZziuYFmXWky4VLqaR39",
+            "rule": "c:S5782",
+            "severity": "BLOCKER",
+            "component": "Stickman230_Buffer_overflows_exemple:vulnerable_stack/vulnerable_stack.c",
+            "project": "Stickman230_Buffer_overflows_exemple",
+            "line": 30,
+            "hash": "b5947581cbbf9943f0dfd4e2d80d80f9",
+            "textRange": {
+                "startLine": 30,
+                "endLine": 30,
+                "startOffset": 2,
+                "endOffset": 21
+            },
+            "flows": [],
+            "status": "OPEN",
+            "message": "\"fgets\" overflows write buffer \"buf\"; passed size \"45\" (45) exceeds buffer size (40)",
+            "effort": "5min",
+            "debt": "5min",
+            "author": "mxime.reynaudcool@gmail.com",
+            "tags": [
+                "cert",
+                "cwe",
+                "symbolic-execution"
+            ],
+            "creationDate": "2026-02-14T17:43:54+0000",
+            "updateDate": "2026-03-12T15:45:14+0000",
+            "type": "VULNERABILITY",
+            "organization": "stickman230-org",
+            "cleanCodeAttribute": "CONVENTIONAL",
+            "cleanCodeAttributeCategory": "CONSISTENT",
+            "impacts": [
+                {
+                    "softwareQuality": "SECURITY",
+                    "severity": "BLOCKER"
+                },
+                {
+                    "softwareQuality": "RELIABILITY",
+                    "severity": "MEDIUM"
+                }
+            ],
+            "issueStatus": "OPEN",
+            "projectName": "Buffer_overflows_exemple",
+            "internalTags": []
+        },
+        {
+            "key": "AZziuYFmXWky4VLqaR3-",
+            "rule": "c:S5308",
+            "severity": "CRITICAL",
+            "component": "Stickman230_Buffer_overflows_exemple:vulnerable_stack/vulnerable_stack.c",
+            "project": "Stickman230_Buffer_overflows_exemple",
+            "line": 37,
+            "hash": "d62f2a9589d1f4d904b96c323e85097c",
+            "textRange": {
+                "startLine": 37,
+                "endLine": 37,
+                "startOffset": 5,
+                "endOffset": 13
+            },
+            "flows": [],
+            "status": "OPEN",
+            "message": "The return value from the call to \u0027setreuid\u0027 is not checked.  If an error occurs in \u0027setreuid\u0027, the following code may execute with unexpected privileges",
+            "effort": "10min",
+            "debt": "10min",
+            "author": "mxime.reynaudcool@gmail.com",
+            "tags": [
+                "symbolic-execution"
+            ],
+            "creationDate": "2026-02-14T17:43:54+0000",
+            "updateDate": "2026-03-12T15:45:14+0000",
+            "type": "CODE_SMELL",
+            "organization": "stickman230-org",
+            "cleanCodeAttribute": "LOGICAL",
+            "cleanCodeAttributeCategory": "INTENTIONAL",
+            "impacts": [
+                {
+                    "softwareQuality": "MAINTAINABILITY",
+                    "severity": "HIGH"
+                }
+            ],
+            "issueStatus": "OPEN",
+            "projectName": "Buffer_overflows_exemple",
+            "internalTags": []
+        },
+        {
+            "key": "AZziuYGJXWky4VLqaR4H",
+            "rule": "c:S5308",
+            "severity": "CRITICAL",
+            "component": "Stickman230_Buffer_overflows_exemple:vulnerable_stack_ret2win/vulnerable_stack_ret2win.c",
+            "project": "Stickman230_Buffer_overflows_exemple",
+            "line": 17,
+            "hash": "d62f2a9589d1f4d904b96c323e85097c",
+            "textRange": {
+                "startLine": 17,
+                "endLine": 17,
+                "startOffset": 4,
+                "endOffset": 12
+            },
+            "flows": [],
+            "status": "OPEN",
+            "message": "The return value from the call to \u0027setreuid\u0027 is not checked.  If an error occurs in \u0027setreuid\u0027, the following code may execute with unexpected privileges",
+            "effort": "10min",
+            "debt": "10min",
+            "author": "mxime.reynaudcool@gmail.com",
+            "tags": [
+                "symbolic-execution"
+            ],
+            "creationDate": "2026-02-14T17:43:54+0000",
+            "updateDate": "2026-03-12T15:45:14+0000",
+            "type": "CODE_SMELL",
+            "organization": "stickman230-org",
+            "cleanCodeAttribute": "LOGICAL",
+            "cleanCodeAttributeCategory": "INTENTIONAL",
+            "impacts": [
+                {
+                    "softwareQuality": "MAINTAINABILITY",
+                    "severity": "HIGH"
+                }
+            ],
+            "issueStatus": "OPEN",
+            "projectName": "Buffer_overflows_exemple",
+            "internalTags": []
+        },
+        {
+            "key": "AZziuYGJXWky4VLqaR4G",
+            "rule": "c:S1481",
+            "severity": "MINOR",
+            "component": "Stickman230_Buffer_overflows_exemple:vulnerable_stack_ret2win/vulnerable_stack_ret2win.c",
+            "project": "Stickman230_Buffer_overflows_exemple",
+            "line": 27,
+            "hash": "4d42aed314dc442a16de36655453abf2",
+            "textRange": {
+                "startLine": 27,
+                "endLine": 27,
+                "startOffset": 8,
+                "endOffset": 11
+            },
+            "flows": [],
+            "status": "OPEN",
+            "message": "unused variable \u0027var\u0027",
+            "effort": "5min",
+            "debt": "5min",
+            "author": "mxime.reynaudcool@gmail.com",
+            "tags": [
+                "unused"
+            ],
+            "creationDate": "2026-02-14T17:43:54+0000",
+            "updateDate": "2026-03-12T15:45:14+0000",
+            "type": "CODE_SMELL",
+            "organization": "stickman230-org",
+            "cleanCodeAttribute": "CLEAR",
+            "cleanCodeAttributeCategory": "INTENTIONAL",
+            "impacts": [
+                {
+                    "softwareQuality": "MAINTAINABILITY",
+                    "severity": "LOW"
+                }
+            ],
+            "issueStatus": "OPEN",
+            "projectName": "Buffer_overflows_exemple",
+            "internalTags": []
+        },
+        {
+            "key": "AZziuYGJXWky4VLqaR4I",
+            "rule": "c:S5782",
+            "severity": "BLOCKER",
+            "component": "Stickman230_Buffer_overflows_exemple:vulnerable_stack_ret2win/vulnerable_stack_ret2win.c",
+            "project": "Stickman230_Buffer_overflows_exemple",
+            "line": 30,
+            "hash": "7317ff6a7c186ae1897383a8d6a2b370",
+            "textRange": {
+                "startLine": 30,
+                "endLine": 30,
+                "startOffset": 4,
+                "endOffset": 24
+            },
+            "flows": [],
+            "status": "OPEN",
+            "message": "\"fgets\" overflows write buffer \"buf\"; passed size \"133\" (133) exceeds buffer size (128)",
+            "effort": "5min",
+            "debt": "5min",
+            "author": "mxime.reynaudcool@gmail.com",
+            "tags": [
+                "cert",
+                "cwe",
+                "symbolic-execution"
+            ],
+            "creationDate": "2026-02-14T17:43:54+0000",
+            "updateDate": "2026-03-12T15:45:14+0000",
+            "type": "VULNERABILITY",
+            "organization": "stickman230-org",
+            "cleanCodeAttribute": "CONVENTIONAL",
+            "cleanCodeAttributeCategory": "CONSISTENT",
+            "impacts": [
+                {
+                    "softwareQuality": "SECURITY",
+                    "severity": "BLOCKER"
+                },
+                {
+                    "softwareQuality": "RELIABILITY",
+                    "severity": "MEDIUM"
+                }
+            ],
+            "issueStatus": "OPEN",
+            "projectName": "Buffer_overflows_exemple",
+            "internalTags": []
+        }
+    ],
+    "components": [
+        {
+            "organization": "stickman230-org",
+            "key": "Stickman230_Buffer_overflows_exemple:CVE-2025-6660/CVE-2025-6660.c",
+            "uuid": "AZziuXr9XWky4VLqaR3R",
+            "enabled": true,
+            "qualifier": "FIL",
+            "name": "CVE-2025-6660.c",
+            "longName": "CVE-2025-6660/CVE-2025-6660.c",
+            "path": "CVE-2025-6660/CVE-2025-6660.c"
+        },
+        {
+            "organization": "stickman230-org",
+            "key": "Stickman230_Buffer_overflows_exemple:vulnerable_integer/vulnerable_integer.c",
+            "uuid": "AZziuXr9XWky4VLqaR3P",
+            "enabled": true,
+            "qualifier": "FIL",
+            "name": "vulnerable_integer.c",
+            "longName": "vulnerable_integer/vulnerable_integer.c",
+            "path": "vulnerable_integer/vulnerable_integer.c"
+        },
+        {
+            "organization": "stickman230-org",
+            "key": "Stickman230_Buffer_overflows_exemple:vulnerable_heap/vulnerable_heap.c",
+            "uuid": "AZziuXr9XWky4VLqaR3Z",
+            "enabled": true,
+            "qualifier": "FIL",
+            "name": "vulnerable_heap.c",
+            "longName": "vulnerable_heap/vulnerable_heap.c",
+            "path": "vulnerable_heap/vulnerable_heap.c"
+        },
+        {
+            "organization": "stickman230-org",
+            "key": "Stickman230_Buffer_overflows_exemple",
+            "uuid": "AZzitu2yELc7mbktnOWC",
+            "enabled": true,
+            "qualifier": "TRK",
+            "name": "Buffer_overflows_exemple",
+            "longName": "Buffer_overflows_exemple"
+        },
+        {
+            "organization": "stickman230-org",
+            "key": "Stickman230_Buffer_overflows_exemple:vulnerable_stack/vulnerable_stack.c",
+            "uuid": "AZziuXr9XWky4VLqaR3X",
+            "enabled": true,
+            "qualifier": "FIL",
+            "name": "vulnerable_stack.c",
+            "longName": "vulnerable_stack/vulnerable_stack.c",
+            "path": "vulnerable_stack/vulnerable_stack.c"
+        },
+        {
+            "organization": "stickman230-org",
+            "key": "Stickman230_Buffer_overflows_exemple:vulnerable_stack_ret2win/vulnerable_stack_ret2win.c",
+            "uuid": "AZziuXr9XWky4VLqaR3f",
+            "enabled": true,
+            "qualifier": "FIL",
+            "name": "vulnerable_stack_ret2win.c",
+            "longName": "vulnerable_stack_ret2win/vulnerable_stack_ret2win.c",
+            "path": "vulnerable_stack_ret2win/vulnerable_stack_ret2win.c"
+        }
+    ],
+    "organizations": [
+        {
+            "key": "stickman230-org",
+            "name": "Stickman230"
+        }
+    ],
+    "facets": []
+}
