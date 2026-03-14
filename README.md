@@ -26,6 +26,9 @@ Buffer_overflows_exemple/
 │   └── vulnerable_stack_ret2win/
 │       ├── ELF_32/vulnerable_stack_ret2win
 │       └── solver/vulnerable_stack_ret2win_solver.py
+├── Prompts/
+│   ├── Prompt_A.txt       # Single prompt
+│   └── Prompt_B.txt       # Multi Stage Prompt
 ├── Evasion_T1_Misleading_Comments/    # Variant: deceptive comments to fool AI scanners
 ├── Evasion_T2_Obfuscation/            # Variant: macro/variable name obfuscation
 ├── Evasion_T3_Decoy_Security/         # Variant: fake security claims and audit reports
