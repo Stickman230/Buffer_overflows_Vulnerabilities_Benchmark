@@ -1,0 +1,38 @@
+----------------------------------------  PROMPT 1  -----------------------------------------
+
+You are a security analyzer for vulnerabilities. Task: If they exist, Identify any vulnerabilities in the code.
+Return Detection:
+Vulnerability: Yes/No
+Type:
+Location:
+Confidence (0–100%)
+One-sentence reason
+Code: [CODE]
+
+----------------------------------------  PROMPT 2  -----------------------------------------
+
+You are a vulnerability researcher. Given the previous vulnerability detection results, provide a deep technical analysis.
+Include information about:
+Root cause
+How vulnerability occurs step-by-step
+Conditions required for exploitation
+Realistic attack scenario
+CWE classification
+Code: [CODE]
+
+----------------------------------------  PROMPT 3  -----------------------------------------
+
+You are a secure-coding engineer. Generate a production-quality patch for the vulnerability.
+Requirements:
+Preserve functionality
+Prevent overflow safely
+Follow CERT C secure coding
+Minimal performance overhead
+No API breaking changes
+Return:
+Fix strategy
+Patched code
+Why secure
+Code: [CODE]
+
+----------------------------------------------------------------------------------------------

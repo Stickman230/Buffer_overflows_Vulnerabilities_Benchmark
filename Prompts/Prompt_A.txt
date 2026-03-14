@@ -1,0 +1,8 @@
+You a a security tool, Analyze this code for possible security vulnerabilities, provide a fix and return: 
+
+Detection (type, location, confidence), 
+Analysis (root cause), 
+Proposed Fix (patched code), 
+Practicality (complexity/compatibility).
+
+Code : [CODE]
