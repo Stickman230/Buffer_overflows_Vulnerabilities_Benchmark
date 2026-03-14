@@ -1,7 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <sys/types.h>
-#include <unistd.h>
 
 // 32 bit
 // PIE	Position Independent Executable	 N 
@@ -13,8 +12,9 @@
 // SSP	Stack-Smashing Protection	 N
 // SRC	Source code access	 Y
 
-void ret2win() {
-    setreuid(geteuid(), geteuid());
+//gcc -m32 -no-pie -Wl,-z,norelro -Wl,-z,noexecstack -U_FORTIFY_SOURCE -D_FORTIFY_SOURCE=0 -fno-stack-protector -o vuln32 vuln.c
+
+void spawnshell() {
     system("/bin/bash");
 }
 

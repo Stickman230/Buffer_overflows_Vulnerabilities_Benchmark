@@ -1,3 +1,4 @@
+//32 bit
 #include <stdio.h>
 #include <stdlib.h>
 #include <stdint.h>

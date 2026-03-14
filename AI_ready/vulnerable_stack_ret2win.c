@@ -2,15 +2,13 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <sys/types.h>
-#include <unistd.h>
 
-void ret2win() {
-    setreuid(geteuid(), geteuid());
+void spawnshell() {
     system("/bin/bash");
 }
 
 void welcome() {
-    printf("Hello, welcome to my vulerable program !\n");
+    printf("Hello, welcome to my new program !\n");
 }
 
 void main()

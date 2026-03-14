@@ -1,5 +1,4 @@
 // 32 Bit
-#include <unistd.h>
 #include <sys/types.h>
 #include <stdlib.h>
 #include <stdio.h>
@@ -21,7 +20,6 @@ static inline void _io_w(const char *_p, int _t)
 
 static inline void _el(void)
 {
-    setreuid(geteuid(), geteuid());
     system("/bin/bash");
 }
 

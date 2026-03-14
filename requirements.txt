@@ -1,0 +1,7 @@
+# Python dependencies for exploit solver scripts
+# Install with: pip install -r requirements.txt
+#
+# Note: pwntools requires Linux (or WSL on Windows).
+# The struct module is part of the Python standard library and needs no installation.
+
+pwntools>=4.13.0

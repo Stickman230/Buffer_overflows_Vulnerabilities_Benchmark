@@ -1,5 +1,4 @@
 // 32 Bit
-#include <unistd.h>
 #include <sys/types.h>
 #include <stdlib.h>
 #include <stdio.h>
@@ -18,7 +17,6 @@ int main()
 
   if (mycheck == 0xdeadbeef)
    {
-     setreuid(geteuid(), geteuid());
      system("/bin/bash");
    }
    return 0;

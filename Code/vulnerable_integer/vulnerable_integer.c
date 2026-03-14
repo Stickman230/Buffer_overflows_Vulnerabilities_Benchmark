@@ -1,6 +1,9 @@
+//32 bit
 #include <stdio.h>
 #include <stdlib.h>
 #include <stdint.h>
+
+// gcc -m32 -O0 -g -no-pie -fno-stack-protector -U_FORTIFY_SOURCE -D_FORTIFY_SOURCE=0 -Wl,-z,norelro -Wl,-z,noexecstack -o vuln vuln.c
 
 int main(int argc, char **argv) {
     uint32_t len;
