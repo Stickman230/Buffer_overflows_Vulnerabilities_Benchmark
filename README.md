@@ -65,7 +65,7 @@ Buffer_overflows_exemple/
 - **Mechanism:** Reads a `uint32_t` length field from a binary file and allocates `len + 1` bytes. When `len = 0xFFFFFFFF`, the addition wraps to `0`, producing a near-zero allocation. Subsequent read of `len` bytes into this tiny buffer causes a heap overflow.
 - **Exploit goal:** Trigger heap corruption via a crafted binary file with `len = 0xFFFFFFFF`.
 
-### 5. CVE-2025-6660 — GIF Heap Buffer Overflow
+### 5. CVE-2025-6660 GIF Heap Buffer Overflow
 - **Architecture:** 64-bit ELF
 - **Mechanism:** A simplified GIF comment-extension parser accumulates sub-block bytes into a fixed 256-byte buffer without bounds checking. An adjacent `AdminSys` struct holds a `command` field and a magic number.
 - **Exploit goal:** Overflow the comment buffer into `AdminSys.command`, replacing it with `/bin/bash` to spawn a shell when the magic value is matched.
@@ -87,7 +87,7 @@ Three variants of the vulnerable code test whether AI-based scanners can be dece
 
 ## Requirements
 
-### System (Linux only — solvers use `pwntools` process spawning)
+### System ((Linux only) solvers use `pwntools` process spawning)
 - GCC with multilib support (`gcc-multilib` for 32-bit targets)
 - Python 3.8+
 - Linux x86 / x86-64
