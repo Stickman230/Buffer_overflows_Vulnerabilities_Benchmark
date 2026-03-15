@@ -1,0 +1,49 @@
+% Table: Prompt B — Model Rankings
+\begin{table}[htbp]
+\centering
+\caption{Prompt B (Multi-Stage Pipeline) — Model Performance Summary}
+\label{tab:prompt_b_rankings}
+\begin{tabular}{lcccccccc}
+\toprule
+\textbf{Rank} & \textbf{Model} & \textbf{Avg Final} & \textbf{Avg Time (s)} & \textbf{Det} & \textbf{Ana} & \textbf{Fix} & \textbf{Prac} & \textbf{$\sigma$} \\
+\midrule
+1 & Gemini 3 (Thinking) & 84.0 & 33.6 & 8.7 & 9.2 & 8.3 & 8.6 & 5.3 \\
+2 & Claude Opus 4.6 & 80.2 & 76.7 & 8.3 & 9.2 & 8.7 & 8.2 & 5.5 \\
+3 & Deepseek (DeepThink) & 72.8 & 179.2 & 7.5 & 8.1 & 8.0 & 8.9 & 8.2 \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+% Table: Prompt B — Per-Case Scores
+\begin{table}[htbp]
+\centering
+\caption{Prompt B — Average Final Score by Model and Vulnerability Case}
+\label{tab:prompt_b_per_case}
+\begin{tabular}{lccccc}
+\toprule
+\textbf{Model} & \textbf{Stack (C1)} & \textbf{Ret2win (C2)} & \textbf{Heap (C3)} & \textbf{CVE-6660 (C4)} & \textbf{Integer (C5)} \\
+\midrule
+Claude Opus 4.6 & 81.5 & 78.2 & 77.5 & 77.0 & 86.5 \\
+Deepseek (DeepThink) & 77.2 & 81.2 & 59.0 & 71.8 & 75.0 \\
+Gemini 3 (Thinking) & 86.5 & 89.0 & 81.0 & 79.2 & 84.5 \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+% Table: Prompt A vs Prompt B Comparison
+\begin{table}[htbp]
+\centering
+\caption{Prompt A (Single) vs Prompt B (Multi-Stage) — Performance Comparison}
+\label{tab:prompt_a_vs_b}
+\begin{tabular}{lcccccc}
+\toprule
+\textbf{Model} & \multicolumn{2}{c}{\textbf{Final Score}} & \textbf{$\Delta$ Score} & \multicolumn{2}{c}{\textbf{Avg Time (s)}} & \textbf{$\Delta$ Time} \\
+\cmidrule(lr){2-3} \cmidrule(lr){5-6}
+ & \textbf{A} & \textbf{B} & & \textbf{A} & \textbf{B} & \\
+\midrule
+Gemini 3 (Thinking) & 83.8 & 84.0 & +0.2 & 13 & 34 & +21s \\
+Claude Opus 4.6 & 80.7 & 80.2 & -0.5 & 33 & 77 & +43s \\
+Deepseek (DeepThink) & 81.3 & 72.8 & -8.5 & 65 & 179 & +115s \\
+\bottomrule
+\end{tabular}
+\end{table}

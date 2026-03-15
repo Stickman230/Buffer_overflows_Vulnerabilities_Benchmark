@@ -1,0 +1,4 @@
+Model,Avg Time (s),Time Score,Detection,Analysis,Fix,Practicality,Avg Final,Std Dev
+Gemini 3 (Thinking),33.63,2.9,8.7,9.2,8.3,8.6,84.05,5.33
+Claude Opus 4.6,76.71,1.4,8.3,9.2,8.7,8.2,80.15,5.5
+Deepseek (DeepThink),179.21,0.4,7.5,8.1,8.0,8.9,72.85,8.17

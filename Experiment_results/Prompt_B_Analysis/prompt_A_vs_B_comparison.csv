@@ -1,0 +1,4 @@
+Model,Prompt A Final,Prompt B Final,Delta,Prompt A Time,Prompt B Time,Time Delta
+Gemini 3 (Thinking),83.8,84.05,0.25,12.77,33.63,20.860000000000003
+Claude Opus 4.6,80.65,80.15,-0.5,33.29,76.71,43.419999999999995
+Deepseek (DeepThink),81.35,72.85,-8.5,64.57,179.21,114.64000000000001
