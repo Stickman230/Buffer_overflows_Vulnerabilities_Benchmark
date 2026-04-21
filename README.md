@@ -11,41 +11,76 @@ A research repository for a university dissertation studying how generative AI t
 ```
 Buffer_overflows_exemple/
 ├── AI_ready/                           # Clean, canonical vulnerable source files
+│   ├── CVE-2025-6660.c
+│   ├── vulnerable_heap.c
+│   ├── vulnerable_integer.c
+│   ├── vulnerable_stack.c
+│   └── vulnerable_stack_ret2win.c
 ├── Code/                               # Source + compiled ELF binaries + exploit solvers
 │   ├── CVE-2025-6660/
-│   │   ├── ELF_64/CVE-2025-6660       (64-bit binary)
-│   │   └── solver/CVE-2025-6660_solver.py
+│   │   ├── CVE-2025-6660.c
+│   │   ├── ELF_64/CVE-2025-6660        (64-bit binary)
+│   │   └── solver/
+│   │       ├── CVE-2025-6660_solver.py
+│   │       ├── evil_shell.gif           (pre-built payload)
+│   │       └── evil_simple.gif
 │   ├── vulnerable_heap/
-│   │   ├── ELF_64/vulnerable_heap     (64-bit binary)
-│   │   └── solver/vunerble_heap_solver.py
+│   │   ├── vulnerable_heap.c
+│   │   ├── ELF_64/vulnerable_heap       (64-bit binary)
+│   │   └── solver/
+│   │       ├── vunerble_heap_solver.py
+│   │       └── flag.txt
 │   ├── vulnerable_integer/
+│   │   ├── vulnerable_integer.c
+│   │   ├── ELF_32/vulnerable_integer    (32-bit binary)
+│   │   ├── exploit.bin                  (pre-built payload)
 │   │   └── solver/vulnerable_integer_solver.py
 │   ├── vulnerable_stack/
-│   │   ├── ELF_32/vulnerable_stack    (32-bit binary)
+│   │   ├── vulnerable_stack.c
+│   │   ├── ELF_32/vulnerable_stack      (32-bit binary)
 │   │   └── solver/vulnerable_stack_solver.py
 │   └── vulnerable_stack_ret2win/
-│       ├── ELF_32/vulnerable_stack_ret2win
+│       ├── vulnerable_stack_ret2win.c
+│       ├── ELF_32/vulnerable_stack_ret2win (32-bit binary)
 │       └── solver/vulnerable_stack_ret2win_solver.py
 ├── Prompts/
-│   ├── Prompt_A.txt       # Single prompt
-│   └── Prompt_B.txt       # Multi Stage Prompt
+│   ├── Prompt_A.txt                     # Single prompt
+│   └── Prompt_B.txt                     # Multi-stage prompt
 ├── Experiment_results/
-│   ├── Dissertation_experiment_data       # Single prompt
-|   |   └── *          # Prompts, rankings, data, case ID, scoring system
-│   ├── Prompt_A_Analysis       
-|   |   ├── *.png          # Graphs with the data
-|   |   └── *.csv          # Data from experiment
-│   ├── Prompt_B_Analysis       
-|   |   ├── *.png          # Graphs with the data
-|   |   └── *.csv          # Data from experiment 
-|   ├─  Literature_Review_Buffer_Overflow_Attacks_in_the_Era_of_Gen_AI.pdf # Research Litterature review
-│   └── Shared Dissertation Experiment Data.xlsx       # Merged  data
-├── Evasion_T1_Misleading_Comments/    # Variant: deceptive comments to fool AI scanners
-├── Evasion_T2_Obfuscation/            # Variant: macro/variable name obfuscation
-├── Evasion_T3_Decoy_Security/         # Variant: fake security claims and audit reports
-├── compile_commands.json              # Build commands (GCC, protections disabled)
-├── sonar-project.properties           # SonarQube project configuration
-├── sonarqube_results.json             # Static analysis results from SonarQube
+│   ├── Dissertation_experiment_data/
+│   │   ├── Dissertation Experiment Data - Evasion Filters.csv
+│   │   ├── Dissertation Experiment Data - General Ranking.csv
+│   │   ├── Dissertation Experiment Data - Prompt A.csv
+│   │   ├── Dissertation Experiment Data - Prompt B.csv
+│   │   ├── Dissertation_Experiment_Data-CVE-2025-6660.csv
+│   │   ├── Dissertation_Experiment_Data-Heap_Overflow.csv
+│   │   ├── Dissertation_Experiment_Data-Integer_Overflow.csv
+│   │   ├── Dissertation_Experiment_Data-Ret2win_Overflow.csv
+│   │   ├── Dissertation_Experiment_Data-Stack_Overflow.csv
+│   │   └── Dissertation_Experiment_Data_Scoring_Guide.pdf
+│   ├── Prompt_A_Analysis/
+│   │   ├── *.png                        # Graphs (overall scores, heatmap, radar, etc.)
+│   │   └── *.csv                        # model_summary, per_case_scores, scanner_comparison
+│   ├── Prompt_B_Analysis/
+│   │   ├── *.png                        # Graphs (includes Prompt A vs B comparisons)
+│   │   └── *.csv                        # model_summary_B, per_case_scores_B, A_vs_B comparison
+│   └── Literature_Review_Buffer_Overflow_Attacks_in_the_Era_of_Gen_AI.pdf
+├── Evasion_T1_Misleading_Comments/      # Variant: deceptive comments to fool AI scanners
+│   ├── CVE-2025-6660/
+│   ├── vulnerable_heap/
+│   └── vulnerable_stack/
+├── Evasion_T2_Obfuscation/              # Variant: macro/variable name obfuscation
+│   ├── CVE-2025-6660/
+│   ├── vulnerable_heap/
+│   └── vulnerable_stack/
+├── Evasion_T3_Decoy_Security/           # Variant: fake security claims and audit reports
+│   ├── CVE-2025-6660/
+│   ├── vulnerable_heap/
+│   └── vulnerable_stack/
+├── ECM3401_activity_log_form.docx       # University activity log
+├── compile_commands.json                # Build commands (GCC, protections disabled)
+├── sonar-project.properties             # SonarQube project configuration
+├── sonarqube_results.json               # Static analysis results from SonarQube
 └── requirements.txt
 ```
 
@@ -55,24 +90,28 @@ Buffer_overflows_exemple/
 
 ### 1. Stack Buffer Overflow (`vulnerable_stack`)
 - **Architecture:** 32-bit ELF
+- **Protections:** All disabled (no PIE, no RelRO, no NX, no SSP, no ASLR, no FORTIFY)
 - **Mechanism:** `fgets(buf, 45, stdin)` reads 45 bytes into a 40-byte stack buffer, allowing a 4-byte overwrite of the adjacent `mycheck` variable.
 - **Exploit goal:** Overwrite `mycheck` with `0xdeadbeef` to spawn `/bin/bash`.
 - **Payload:** `'A' * 40 + b'\xef\xbe\xad\xde'`
 
 ### 2. Ret2Win Stack Overflow (`vulnerable_stack_ret2win`)
 - **Architecture:** 32-bit ELF
+- **Protections:** NX enabled, no PIE, no RelRO, no SSP, no ASLR, no FORTIFY
 - **Mechanism:** `fgets(buf, 133, stdin)` reads 133 bytes into a 128-byte buffer, overflowing into an adjacent function pointer `void (*func)()`.
 - **Exploit goal:** Redirect `func` to the hidden `spawnshell()` function.
 - **Payload:** `'A' * 128 + p32(addr_of_spawnshell)`
 
 ### 3. Heap Buffer Overflow (`vulnerable_heap`)
 - **Architecture:** 64-bit ELF
+- **Protections:** PIE enabled, Full RelRO, NX enabled; SSP and FORTIFY disabled
 - **Mechanism:** `gets()` writes into a 32-byte heap-allocated `arg` buffer. An adjacent `cmd` buffer (0x400 bytes) holds the shell command to execute.
 - **Exploit goal:** Overflow `arg` to overwrite the content of `cmd` with an arbitrary command (e.g., `cat flag.txt`), bypassing the `Securecheck()` metacharacter filter.
 - **Payload:** Null byte + padding + target command string
 
 ### 4. Integer Overflow (`vulnerable_integer`)
 - **Architecture:** 32-bit ELF
+- **Protections:** No PIE, no RelRO, no NX, no SSP, no FORTIFY
 - **Mechanism:** Reads a `uint32_t` length field from a binary file and allocates `len + 1` bytes. When `len = 0xFFFFFFFF`, the addition wraps to `0`, producing a near-zero allocation. Subsequent read of `len` bytes into this tiny buffer causes a heap overflow.
 - **Exploit goal:** Trigger heap corruption via a crafted binary file with `len = 0xFFFFFFFF`.
 
@@ -86,7 +125,7 @@ Buffer_overflows_exemple/
 
 ## Evasion Techniques
 
-Three variants of the vulnerable code test whether AI-based scanners can be deceived:
+Three variants of a subset of the vulnerable code (CVE-2025-6660, vulnerable_heap, vulnerable_stack) test whether AI-based scanners can be deceived:
 
 | Directory | Technique | Method |
 |---|---|---|
@@ -98,7 +137,7 @@ Three variants of the vulnerable code test whether AI-based scanners can be dece
 
 ## Requirements
 
-### System ((Linux only) solvers use `pwntools` process spawning)
+### System (Linux only — solvers use `pwntools` process spawning)
 - GCC with multilib support (`gcc-multilib` for 32-bit targets)
 - Python 3.8+
 - Linux x86 / x86-64
@@ -110,15 +149,19 @@ pip install -r requirements.txt
 ```
 
 ### Compile from source
-Compilation flags intentionally disable mitigations:
+Compilation flags intentionally disable specific mitigations per target. Examples from `compile_commands.json`:
 ```bash
-# 32-bit example
-gcc -m32 -O0 -g -fno-stack-protector -z execstack -no-pie -o vulnerable_stack vulnerable_stack.c
+# 32-bit stack overflow (all mitigations off)
+gcc -m32 -O0 -g vulnerable_stack.c -o vulnerable_stack \
+    -fno-stack-protector -U_FORTIFY_SOURCE -D_FORTIFY_SOURCE=0 \
+    -z execstack -no-pie -fno-pie -Wl,-z,norelro
 
-# 64-bit example
-gcc -O0 -g -fno-stack-protector -z execstack -no-pie -o vulnerable_heap vulnerable_heap.c
+# 64-bit heap overflow (PIE + RelRO + NX on, SSP + FORTIFY off)
+gcc -m64 -fPIE -pie -Wl,-z,relro,-z,now -Wl,-z,noexecstack \
+    -U_FORTIFY_SOURCE -D_FORTIFY_SOURCE=0 -fno-stack-protector \
+    -o vulnerable_heap vulnerable_heap.c
 ```
-Full commands are in `compile_commands.json`.
+Full commands for all five targets are in `compile_commands.json`.
 
 ---
 
@@ -132,11 +175,11 @@ python3 vulnerable_stack/solver/vulnerable_stack_solver.py
 # 2. The solver opens an interactive shell if successful
 ```
 
-The CVE-2025-6660 solver generates an `evil.gif` payload file and then feeds it to the binary:
+The CVE-2025-6660 solver generates an `evil_shell.gif` payload file and then feeds it to the binary:
 ```bash
 cd Code/CVE-2025-6660/solver
-python3 CVE-2025-6660_solver.py       # creates evil.gif
-../ELF_64/CVE-2025-6660 evil.gif      # run the parser against it
+python3 CVE-2025-6660_solver.py       # creates evil_shell.gif
+cat - | ../ELF_64/CVE-2025-6660 evil_shell.gif
 ```
 
 ---
@@ -163,4 +206,4 @@ This repository is part of a dissertation investigating:
 
 ## Disclaimer
 
-All programs are compiled with security mitigations **deliberately disabled** (NX, stack canaries, ASLR, PIE). They are provided solely for educational and research purposes. The author does not endorse using these techniques against systems without explicit permission.
+All programs are compiled with security mitigations **deliberately disabled** (or selectively enabled for specific test cases). They are provided solely for educational and research purposes. The author does not endorse using these techniques against systems without explicit permission.
