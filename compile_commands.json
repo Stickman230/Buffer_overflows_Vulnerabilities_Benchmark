@@ -1,27 +1,27 @@
 [
   {
-    "directory": "C:\\Users\\Maxime R\\Documents\\GitHub\\Buffer_overflows_exemple\\CVE-2025-6660",
+    "directory": "C:\\Users\\Maxime R\\Documents\\GitHub\\Buffer_overflows_exemple\\Code\\CVE-2025-6660",
     "command": "gcc -O0 -g -fno-omit-frame-pointer CVE-2025-6660.c -o CVE-2025-6660",
     "file": "CVE-2025-6660.c"
   },
   {
-    "directory": "C:\\Users\\Maxime R\\Documents\\GitHub\\Buffer_overflows_exemple\\vulnerable_heap",
-    "command": "gcc -O0 -g vulnerable_heap.c -o vulnerable_heap",
+    "directory": "C:\\Users\\Maxime R\\Documents\\GitHub\\Buffer_overflows_exemple\\Code\\vulnerable_heap",
+    "command": "gcc -m64 -fPIE -pie -Wl,-z,relro,-z,now -Wl,-z,noexecstack -U_FORTIFY_SOURCE -D_FORTIFY_SOURCE=0 -fno-stack-protector -o vulnerable_heap vulnerable_heap.c",
     "file": "vulnerable_heap.c"
   },
   {
-    "directory": "C:\\Users\\Maxime R\\Documents\\GitHub\\Buffer_overflows_exemple\\vulnerable_integer",
-    "command": "gcc -O0 -g vulnerable_integer.c -o vulnerable_integer",
+    "directory": "C:\\Users\\Maxime R\\Documents\\GitHub\\Buffer_overflows_exemple\\Code\\vulnerable_integer",
+    "command": "gcc -m32 -O0 -g -no-pie -fno-stack-protector -U_FORTIFY_SOURCE -D_FORTIFY_SOURCE=0 -Wl,-z,norelro -Wl,-z,noexecstack -o vulnerable_integer vulnerable_integer.c",
     "file": "vulnerable_integer.c"
   },
   {
-    "directory": "C:\\Users\\Maxime R\\Documents\\GitHub\\Buffer_overflows_exemple\\vulnerable_stack",
-    "command": "gcc -m32 -O0 -g -fno-stack-protector vulnerable_stack.c -o vulnerable_stack",
+    "directory": "C:\\Users\\Maxime R\\Documents\\GitHub\\Buffer_overflows_exemple\\Code\\vulnerable_stack",
+    "command": "gcc -m32 -O0 -g vulnerable_stack.c -o vulnerable_stack -fno-stack-protector -U_FORTIFY_SOURCE -D_FORTIFY_SOURCE=0 -z execstack -no-pie -fno-pie -Wl,-z,norelro",
     "file": "vulnerable_stack.c"
   },
   {
-    "directory": "C:\\Users\\Maxime R\\Documents\\GitHub\\Buffer_overflows_exemple\\vulnerable_stack_ret2win",
-    "command": "gcc -m32 -O0 -g -fno-stack-protector vulnerable_stack_ret2win.c -o vulnerable_stack_ret2win",
+    "directory": "C:\\Users\\Maxime R\\Documents\\GitHub\\Buffer_overflows_exemple\\Code\\vulnerable_stack_ret2win",
+    "command": "gcc -m32 -no-pie -Wl,-z,norelro -Wl,-z,noexecstack -U_FORTIFY_SOURCE -D_FORTIFY_SOURCE=0 -fno-stack-protector -o vulnerable_stack_ret2win vulnerable_stack_ret2win.c",
     "file": "vulnerable_stack_ret2win.c"
   }
 ]
