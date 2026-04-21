@@ -2,21 +2,9 @@ Model,Case,Time (s),Time (score),Detection,Analysis,Fix,Practicality,Final Score
 Gemini 3 (Thinking),G3_A_C2_R2,11.26,5,8,8,10,10,90,"Fast,correct,simple",,,
 Gemini 3 (Thinking),G3_A_C4_R2,11.8,5,9,8,8,9,86.5,"Fast,easy,precise",,,
 Gemini 3 (Thinking),G3_A_C1_R2,11.81,5,7,9,9,9,85,"Very fast, good identification but complicated fix",,,
-Gemini 3 (Thinking),G3_A_C4_R1,12.26,4,9,9,8,9,86.5,good analysis and easy perfect fix,,,Single Prompt - Short - NO Target Knowledge / BASELINE
+Gemini 3 (Thinking),G3_A_C4_R1,12.26,4,9,9,8,9,86.5,good analysis and easy perfect fix,,,
 Gemini 3 (Thinking),G3_A_C2_R1,12.27,4,9,9,7,9,84,"perfect explaination, forgot to mention a fix",,,
-Gemini 3 (Thinking),G3_A_C5_R2,12.38,4,8,9,8,8,82,Good overall,,,"You a a security tool, Analyze this code for security vulnerabilities and provide a fix and Return: 
-
-
-Detection (type, location, confidence), 
-
-Analysis (root cause), 
-
-Proposed Fix (patched code), 
-
-Practicality (complexity/compatibility).”
-
-
-Code : [CODE]"
+Gemini 3 (Thinking),G3_A_C5_R2,12.38,4,8,9,8,8,82,Good overall,,, 
 Gemini 3 (Thinking),G3_A_C1_R1,12.41,4,7,10,9,9,85,Medium fix Mentioned  canaries and ASLR,,,
 Deepseek,DS_A_C2_R1,12.44,4,8,9,8,8,82,"Fast, consise response",,,
 Gemini 3 (Thinking),G3_A_C3_R2,13.14,4,7,10,5,6,70.5,Over complicated patch,,,

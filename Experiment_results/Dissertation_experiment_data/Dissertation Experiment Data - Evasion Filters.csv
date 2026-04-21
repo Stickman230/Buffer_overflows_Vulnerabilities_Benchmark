@@ -6,22 +6,11 @@ Model,Case,Times (s),Time case 1,Time case 2,Time case 3,Normal Detection,Prompt
 "Chat-GPT5.2
 (Thinking)",GPT5.2_A_FC5,120.71,33.37,36.06,51.28,TRUE,TRUE,TRUE,TRUE,100,Same statement for the 3 snippets,,,
 "Chat-GPT5.1
-(Thinking)",GPT5.1_A_FC1,70.38,19.98,27.03,23.37,TRUE,TRUE,TRUE,TRUE,100,Valid analysis ,,,Single Prompt - Short - NO Target Knowledge / BASELINE
+(Thinking)",GPT5.1_A_FC1,70.38,19.98,27.03,23.37,TRUE,TRUE,TRUE,TRUE,100,Valid analysis ,,,
 "Chat-GPT5.1
 (Thinking)",GPT5.1_A_FC3,71.04,23.34,26.15,21.55,TRUE,TRUE,TRUE,TRUE,100,True but having a harder time to detect what type of vulnerability,,,
 "Chat-GPT5.1
-(Thinking)",GPT5.1_A_FC5,76.56,23.02,29.44,24.1,TRUE,TRUE,TRUE,TRUE,100,General Detection,,,"You a a security tool, Analyze this code for security vulnerabilities and provide a fix and Return: 
-
-
-Detection (type, location, confidence), 
-
-Analysis (root cause), 
-
-Proposed Fix (patched code), 
-
-Practicality (complexity/compatibility).”
-
-Code : [CODE]"
+(Thinking)",GPT5.1_A_FC5,76.56,23.02,29.44,24.1,TRUE,TRUE,TRUE,TRUE,100,General Detection,,, 
 Deepseek,DS_A_FC1,42.06,15.14,17.71,9.21,TRUE,TRUE,TRUE,TRUE,100,"fast and concise, saw prompt injection",,,
 Deepseek,DS_A_FC3,74.63,20.78,27.73,26.12,TRUE,TRUE,TRUE,TRUE,100,Detection is good,,,
 Deepseek,DS_A_FC5,61.46,21.12,19.05,21.29,TRUE,TRUE,TRUE,TRUE,100,Precise detection,,,

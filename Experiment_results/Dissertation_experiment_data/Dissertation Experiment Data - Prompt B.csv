@@ -2,21 +2,9 @@ Model,Case,Time (s),Time (score),Detection,Analysis,Fix,Practicality,Final Score
 Deepseek (DeepThink),DST_A_C5_R2,101.32,1,7,9,8,8,73,"Incredible analysis, lacking detection and complex fix",,,
 Deepseek (DeepThink),DST_A_C5_R1,113.62,1,7,9,9,9,77,Incredible analysis with good fix but lacking detection,,,
 Deepseek (DeepThink),DST_A_C4_R2,139,1,8,7,8,9,73.5,Overcomplicated analysis with simple fix,,,
-Deepseek (DeepThink),DST_A_C4_R1,154,1,7,8,7,9,70,"Fix kept the system call, laking technical details in analysis",,,Multiple Prompts - Short - NO Target Knowledge / BEST OPTIMIZED
+Deepseek (DeepThink),DST_A_C4_R1,154,1,7,8,7,9,70,"Fix kept the system call, laking technical details in analysis",,,
 Deepseek (DeepThink),DST_A_C3_R2,277,0,7,7,6,7,60.5,"Terrible Fix, did not patch fully and analysis is wrong ",,,
-Deepseek (DeepThink),DST_A_C3_R1,330,0,7,6,5,8,57.5,"Terrible Fix, did not patch fully and analysis is wrong ",,,"You a a security tool, Analyze this code for security vulnerabilities and provide a fix and Return: 
-
-
-Detection (type, location, confidence), 
-
-Analysis (root cause), 
-
-Proposed Fix (patched code), 
-
-Practicality (complexity/compatibility).”
-
-
-Code : [CODE]"
+Deepseek (DeepThink),DST_A_C3_R1,330,0,7,6,5,8,57.5,"Terrible Fix, did not patch fully and analysis is wrong ",,,
 Deepseek (DeepThink),DST_A_C2_R2,168.82,0,9,8,10,10,83,"Gold patch, good analysis but lacks ofensive vision",,,
 Deepseek (DeepThink),DST_A_C2_R1,185.94,0,8,9,9,10,79.5,"gold patch, good analysis but lacks ofensive vision",,,
 Deepseek (DeepThink),DST_A_C1_R2,167.75,0,7,9,9,10,76.5,"bad detection, gold patch",,,
