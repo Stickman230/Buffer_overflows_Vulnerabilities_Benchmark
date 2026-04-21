@@ -22,7 +22,7 @@ Code: [CODE]
 
 ----------------------------------------  PROMPT 3  -----------------------------------------
 
-You are a secure-coding engineer. Generate a production-quality patch for the vulnerability.
+You are a secure-coding engineer. Generate a production-quality patch if a vulnerability exists.
 Requirements:
 Preserve functionality
 Prevent overflow safely

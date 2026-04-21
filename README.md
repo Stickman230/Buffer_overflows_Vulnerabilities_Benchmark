@@ -29,6 +29,17 @@ Buffer_overflows_exemple/
 ├── Prompts/
 │   ├── Prompt_A.txt       # Single prompt
 │   └── Prompt_B.txt       # Multi Stage Prompt
+├── Experiment_results/
+│   ├── Dissertation_experiment_data       # Single prompt
+|   |   └── *          # Prompts, rankings, data, case ID, scoring system
+│   ├── Prompt_A_Analysis       
+|   |   ├── *.png          # Graphs with the data
+|   |   └── *.csv          # Data from experiment
+│   ├── Prompt_B_Analysis       
+|   |   ├── *.png          # Graphs with the data
+|   |   └── *.csv          # Data from experiment 
+|   ├─  Literature_Review_Buffer_Overflow_Attacks_in_the_Era_of_Gen_AI.pdf # Research Litterature review
+│   └── Shared Dissertation Experiment Data.xlsx       # Merged  data
 ├── Evasion_T1_Misleading_Comments/    # Variant: deceptive comments to fool AI scanners
 ├── Evasion_T2_Obfuscation/            # Variant: macro/variable name obfuscation
 ├── Evasion_T3_Decoy_Security/         # Variant: fake security claims and audit reports
