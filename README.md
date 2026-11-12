@@ -77,7 +77,6 @@ Buffer_overflows_Vulnerabilities_Benchmark/
 │   ├── vulnerable_heap/
 │   └── vulnerable_stack/
 ├── compile_commands.json                # Build commands (GCC; mitigations set per case)
-├── sonar-project.properties             # SonarQube project configuration
 ├── sonarqube_results.json               # Static analysis results from SonarQube
 └── requirements.txt
 ```
