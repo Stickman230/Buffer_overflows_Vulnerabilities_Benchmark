@@ -183,7 +183,7 @@ cat - | ../ELF_64/CVE-2025-6660 evil_shell.gif
 
 ## Static Analysis
 
-SonarQube was used as a traditional static-analysis baseline. Results are stored in `sonarqube_results.json`.
+SonarQube was used as a traditional static-analysis baseline. Results are stored in `sonarqube_results.json`. Semgrep was used as a traditional static-analysis baseline `Semgrep_results.md`
 
 To re-run analysis (requires a running SonarQube instance):
 ```bash
