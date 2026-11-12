@@ -11,11 +11,11 @@ A research repository for a university dissertation studying how generative AI t
 ```
 Buffer_overflows_Vulnerabilities_Benchmark/
 ├── AI_ready/                           # Clean, canonical vulnerable source files
-│   ├── CVE-2025-6660.c
-│   ├── vulnerable_heap.c
-│   ├── vulnerable_integer.c
-│   ├── vulnerable_stack.c
-│   └── vulnerable_stack_ret2win.c
+│   ├── code5.c
+│   ├── code4.c
+│   ├── code3.c
+│   ├── code2.c
+│   └── code1.c
 ├── Code/                               # Source + compiled ELF binaries + exploit solvers
 │   ├── CVE-2025-6660/
 │   │   ├── CVE-2025-6660.c
