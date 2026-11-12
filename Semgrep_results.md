@@ -15,8 +15,8 @@ Validate and sanitize any input used to create file paths. Enforce strict file a
 
 **Affected files:**
 
-- `CVE-2025-6660/CVE-2025-6660.c:88`
-- `vulnerable_integer/vulnerable_integer.c:20`
+- `AI_ready/code5.c:88`
+- `AI_ready/code5.c:20`
 
 ---
 
@@ -33,8 +33,8 @@ Avoid executing OS commands with user input. If this is unavoidable, validate an
 
 **Affected files:**
 
-- `vulnerable_heap/vulnerable_heap.c:54`
-- `vulnerable_integer/vulnerable_integer.c:40`
+- `AI_ready/code3.c:54`
+- `AI_ready/code5.c:40`
 
 ---
 
@@ -51,7 +51,7 @@ Use `fgets()` or `gets_s()` instead.
 
 **Affected files:**
 
-- `vulnerable_heap/vulnerable_heap.c:50`
+- `AI_ready/code3.c:50`
 
 ---
 
@@ -68,8 +68,8 @@ Prefer a more restrictive API, such as `execve` from the `exec` family.
 
 **Affected files:**
 
-- `CVE-2025-6660/CVE-2025-6660.c:73`
-- `vulnerable_heap/vulnerable_heap.c:54`
-- `vulnerable_integer/vulnerable_integer.c:40`
-- `vulnerable_stack/vulnerable_stack.c:38`
-- `vulnerable_stack_ret2win/vulnerable_stack_ret2win.c:18`
+- `AI_ready/code5.c:73`
+- `AI_ready/code3.c:54`
+- `AI_ready/code5.c:40`
+- `AI_ready/code1.c:38`
+- `AI_ready/code2.c:18`
