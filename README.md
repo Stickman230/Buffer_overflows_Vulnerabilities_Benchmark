@@ -9,7 +9,7 @@ A research repository for a university dissertation studying how generative AI t
 ## Repository Structure
 
 ```
-Buffer_overflows_exemple/
+Buffer_overflows_Vulnerabilities_Benchmark/
 ├── AI_ready/                           # Clean, canonical vulnerable source files
 │   ├── CVE-2025-6660.c
 │   ├── vulnerable_heap.c
@@ -64,7 +64,6 @@ Buffer_overflows_exemple/
 │   ├── Prompt_B_Analysis/
 │   │   ├── *.png                        # Graphs (includes Prompt A vs B comparisons)
 │   │   └── *.csv                        # model_summary_B, per_case_scores_B, A_vs_B comparison
-│   └── Literature_Review_Buffer_Overflow_Attacks_in_the_Era_of_Gen_AI.pdf
 ├── Evasion_T1_Misleading_Comments/      # Variant: deceptive comments to fool AI scanners
 │   ├── CVE-2025-6660/
 │   ├── vulnerable_heap/
@@ -77,8 +76,7 @@ Buffer_overflows_exemple/
 │   ├── CVE-2025-6660/
 │   ├── vulnerable_heap/
 │   └── vulnerable_stack/
-├── ECM3401_activity_log_form.docx       # University activity log
-├── compile_commands.json                # Build commands (GCC, protections disabled)
+├── compile_commands.json                # Build commands (GCC; mitigations set per case)
 ├── sonar-project.properties             # SonarQube project configuration
 ├── sonarqube_results.json               # Static analysis results from SonarQube
 └── requirements.txt
@@ -186,7 +184,7 @@ cat - | ../ELF_64/CVE-2025-6660 evil_shell.gif
 
 ## Static Analysis
 
-SonarQube was used as the primary AI-assisted scanner. Configuration is in `sonar-project.properties` and results are stored in `sonarqube_results.json`.
+SonarQube was used as a traditional static-analysis baseline. Configuration is in `sonar-project.properties` and results are stored in `sonarqube_results.json`.
 
 To re-run analysis (requires a running SonarQube instance):
 ```bash
@@ -201,6 +199,12 @@ This repository is part of a dissertation investigating:
 - How well generative AI and static analysis tools identify classic buffer overflow patterns.
 - Whether common evasion techniques (misleading comments, obfuscation, fake security claims) reduce detection rates.
 - The practical limits of AI-assisted vulnerability scanning in a CTF / educational context.
+
+---
+
+## Attribution
+
+Cases **C1 (stack)** and **C2 (ret2win)** are adapted from publicly available CTF-style challenges (Root-Me). They are included here solely for educational benchmarking of AI vulnerability detection. All other cases (heap, integer, and the CVE-2025-6660-modelled parser) were written for this project.
 
 ---
 

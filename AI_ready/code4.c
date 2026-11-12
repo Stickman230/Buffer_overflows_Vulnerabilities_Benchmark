@@ -4,7 +4,7 @@
 #include <stdio.h>
 #include <string.h>
 
-int do_math(int a, int b){
+int function1(int a, int b){
     if ((a * a) == b){
         printf("\n[Calculus] Math is correct here !\n");
         return 0;
@@ -13,18 +13,18 @@ int do_math(int a, int b){
     return 1;
 }
 
-int welcome(){
+int function2(){
     printf("Welcome to my GIF parser, I will now anylyse your image !\n");
-    do_math(5,25);
+    function1(5,25);
     return 0;
 }
 
-static uint8_t read_u8(FILE *f) {
+static uint8_t function3(FILE *f) {
     int c = fgetc(f);
     return (c == EOF) ? 0 : (uint8_t)c;
 }
 
-static size_t read_bytes(FILE *f, uint8_t *out, size_t n) {
+static size_t function4(FILE *f, uint8_t *out, size_t n) {
     return fread(out, 1, n, f);
 }
 
@@ -35,7 +35,7 @@ typedef struct AdminSys {
     uint32_t counter;
 } AdminSys;
 
-int parse_gif_subblocks_vuln(FILE *f) {
+int function5(FILE *f) {
     const size_t BUF_SIZE = 256;
 
     
@@ -57,11 +57,11 @@ int parse_gif_subblocks_vuln(FILE *f) {
 
     size_t written = 0;
     while (1) {
-        uint8_t len = read_u8(f);               
+        uint8_t len = function3(f);               
         if (len == 0) break;                    
 
         
-        if (read_bytes(f, buf + written, len) != len) {
+        if (function4(f, buf + written, len) != len) {
             printf("Short read\n");
             break;
         }
@@ -92,12 +92,12 @@ int main(int argc, char **argv) {
         fprintf(stderr, "Usage: %s <input.bin>\n", argv[0]);
         return 1;
     }
-    int wc = welcome();
+    int wc = function2();
 
     FILE *f = fopen(argv[1], "rb");
     if (!f) { perror("fopen"); return 1; }
 
-    int rc = parse_gif_subblocks_vuln(f);
+    int rc = function5(f);
     fclose(f);
     return rc;
 }

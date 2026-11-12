@@ -15,7 +15,7 @@ Gemini 3 (Thinking),G3_A_C4_R2,36.5,3,9,8,9,9,85,"Talks too much, lacks offensiv
 Gemini 3 (Thinking),G3_A_C4_R1,33.73,3,8,7,7,8,73.5,"kept shell and missed a vuln,",,,
 Gemini 3 (Thinking),G3_A_C3_R2,46.91,2,10,9,7,8,81.5,Perfect detection  but mediocre fix,,,
 Gemini 3 (Thinking),G3_A_C3_R1,29.53,3,9,9,7,8,80.5,mediocre fix but good detection and analysis,,,
-Gemini 3 (Thinking),G3_A_C2_R2,31.53,3,9,10,10,10,94,Perfect Run + 1 point,,,
+Gemini 3 (Thinking),G3_A_C2_R2,31.53,3,9,10,10,10,93,Perfect run,,,
 Gemini 3 (Thinking),G3_A_C2_R1,27.85,3,9,10,7,9,84,"simple fix but left the shell spawning function, good analysis",,,
 Gemini 3 (Thinking),G3_A_C1_R2,32.29,3,8,10,9,8,84.5,"Lacking detection, perfect analysis with payload exemple",,,
 Gemini 3 (Thinking),G3_A_C1_R1,33.42,3,10,9,9,8,88.5,"Analysis forgot certian points, overall great",,,

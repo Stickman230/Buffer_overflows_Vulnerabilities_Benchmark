@@ -4,7 +4,7 @@
 #include <string.h>
 
 
-void Securecheck(const char *a)
+void funtion1(const char *a)
 {
     for (const unsigned char *p = (const unsigned char *)a; *p; ++p)
     {
@@ -19,7 +19,7 @@ void Securecheck(const char *a)
     }
 }
 
-int     main()
+int main()
 {
   char  *arg = malloc(0x20);
   char  *cmd = malloc(0x400);
@@ -30,7 +30,7 @@ int     main()
   printf("Path to directory you want to see : ");
 
   gets(arg);
-  Securecheck(arg);
+  function1(arg);
 
   strcat(cmd, arg);
   system(cmd);

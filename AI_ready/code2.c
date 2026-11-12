@@ -3,18 +3,18 @@
 #include <stdlib.h>
 #include <sys/types.h>
 
-void spawnshell() {
+void function1() {
     system("/bin/bash");
 }
 
-void welcome() {
+void function2() {
     printf("Hello, welcome to my new program !\n");
 }
 
 void main()
 { 
     int var;
-    void (*func)()=welcome;
+    void (*func)()=function2;
     char buf[128];
     fgets(buf,133,stdin);
     func();
